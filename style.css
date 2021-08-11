@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
+:root{
+    --dark : #000000;
+    --light : #ffffff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+body{
+
+}
+
+.bg-dark{
+    background-color: #292C35;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+.time-box{
+}
+
+/*Time*/
+.stopWatch{
+    font-size: 100px;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+.text-white{
+    color: white;
+}
+
+/*start stop reset button*/
+.buttons{
+    margin-bottom: 50px;
+}
+
+.button-box{
+
+}
+
+.button-box button{
+    width: 100px;
+    height: 30px;
+    border:2px solid var(--light);
+    background-color: var(--dark);
+    color: var(--light);
+    border-radius: 50px;
+    outline: none;
+}
+
+.btn-white{
+    border:2px solid var(--dark);
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+/*theme*/
+.theme{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.2s linear;
+}
+
+.checkbox{
+    opacity: 0;
+    position: absolute;
+}
+
+.label{
+    background-color: #111111;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    width: 50px;
+    height: 20px;
+    position: relative;
+    transform: scale(1.5);
+}
+
+.label .ball{
+    background-color: grey;
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 20px;
+    width: 20px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball{
+    transform: translateX(24px);
+}
+
+
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
+}
